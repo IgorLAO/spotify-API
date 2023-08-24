@@ -30,6 +30,9 @@ server.get('/artists', async (req, resp) => {
     }
 });
 
+
+
+
 server.post('/list', async (req, resp) => {
     try {
         const add = req.body;
