@@ -1,0 +1,20 @@
+CREATE DATABASE SPOT_DB;
+
+USE SPOT_DB;
+
+CREATE TABLE ARTISTS_TB(
+	ID_ARTIST		INT primary KEY auto_increment,
+    NM_ARTIST		VARCHAR(100)
+);
+
+CREATE TABLE MUSICS_TB(
+	ID_MUSIC 		INT primary KEY auto_increment,
+    ID_ARTIST		INT,
+    NM_MUSIC		VARCHAR(100),
+    IMG_COVER		VARCHAR(900),
+	foreign key(ID_ARTIST) references ARTISTS_TB(ID_ARTIST)
+);
+
+drop table MUSICS_tb;
+
+SELECT * FROM MUSICS_TB;
